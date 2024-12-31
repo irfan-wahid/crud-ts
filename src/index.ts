@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 
-//routing apps
+//routing apps api
 app.get('/feed', async(req: Request, res: Response) => {
   const posts = await prisma.post.findMany({
     include: {
